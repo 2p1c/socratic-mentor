@@ -27,14 +27,15 @@
 ## Installation
 
 ```bash
-# 全局安装 — 所有项目可用
-npm install -g socratic-mentor
+npx skills add 2p1c/socratic-mentor
+```
 
-# 单项目安装 — 仅当前项目
-npx socratic-mentor
+也可以通过 npm 安装：
 
-# 或作为项目依赖固化版本
-npm install --save-dev socratic-mentor
+```bash
+npm install -g socratic-mentor      # 全局安装
+npx socratic-mentor                 # 单项目安装
+npm install --save-dev socratic-mentor  # 作为项目依赖
 ```
 
 ### 激活
