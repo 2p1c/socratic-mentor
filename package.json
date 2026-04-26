@@ -1,6 +1,6 @@
 {
   "name": "socratic-mentor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Claude Code 学习导师。任何概念、任何代码库，用提问引导你快速上手。学完自动生成要点，一键同步飞书。 / A Claude Code learning mentor that guides you through any concept or codebase via questioning. Key takeaways auto-sync to Feishu.",
   "license": "MIT",
   "keywords": [
