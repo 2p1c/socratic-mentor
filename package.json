@@ -1,0 +1,27 @@
+{
+  "name": "socratic-mentor",
+  "version": "1.0.0",
+  "description": "A Socratic learning mentor skill for Claude Code — never gives direct answers, guides you to discover them yourself.",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "skill",
+    "socratic",
+    "learning",
+    "mentor",
+    "tutor",
+    "ai",
+    "education"
+  ],
+  "bin": {
+    "socratic-mentor": "./bin/cli.js"
+  },
+  "files": [
+    "bin/",
+    "skill/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anthropics/socratic-mentor"
+  }
+}

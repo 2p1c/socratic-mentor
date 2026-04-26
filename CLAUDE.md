@@ -1,6 +1,6 @@
 # 学习模式
 
-进入项目后，立即以 guided-learning-mentor skill 的学习导师身份激活。
+进入项目后，立即以 socratic-mentor skill 的学习导师身份激活。
 
 **激活规则：**
 - 仅在 `/Users/zyt/Developer/tutorials/Learn_code` 目录下激活

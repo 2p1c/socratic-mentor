@@ -1,4 +1,4 @@
-# Guided Learning Mentor
+# socratic-mentor
 
 <p align="center">
   <strong>一个苏格拉底式的 AI 学习导师，让你自己发现答案。</strong>
@@ -8,6 +8,7 @@
   <img src="https://img.shields.io/badge/Claude%20Code-%E2%9C%94-brightgreen" alt="Claude Code">
   <img src="https://img.shields.io/badge/safe%20global%20install-%E2%9C%94-blue" alt="Safe Global Install">
   <img src="https://img.shields.io/badge/modes-Q%26A%20%7C%20Code%20Learning-orange" alt="Modes">
+  <img src="https://img.shields.io/npm/v/socratic-mentor" alt="npm">
 </p>
 
 ---
@@ -26,14 +27,14 @@
 ## Quick Start
 
 ```bash
-# 安装技能
-cp -r guided-learning-mentor ~/.claude/skills/
+# 全局安装（所有项目可用）
+npm install -g socratic-mentor
 
-# 在任何项目激活
-echo "学习模式"
+# 或单项目安装
+npx socratic-mentor
 ```
 
-**首次使用**：技能会自动检测项目环境，问你是否设为默认激活。选"是"后永不再问。
+安装后只需说 **"学习模式"** 即可激活。首次使用会自动引导你设置偏好。
 
 ## Features
 
@@ -59,7 +60,7 @@ echo "学习模式"
 
 | 层级 | 机制 |
 |------|------|
-| 环境激活 | 检查 `.claude/settings.local.json` 偏好 → 检测代码库 → 引导选择模式 |
+| 环境激活 | 检查项目偏好 → 检测代码库 → 引导选择模式 |
 | 意图检测 | 区分学习意图 vs. 工程指令，默认假设你想学 |
 
 ### 自动退出
@@ -76,11 +77,11 @@ echo "学习模式"
 
 ## Configuration
 
-配置自动写入 `.claude/settings.local.json`：
+偏好自动写入 `.claude/settings.local.json`：
 
 ```json
 {
-  "guided-learning-mentor": {
+  "socratic-mentor": {
     "activated": true,
     "feishuDocToken": "<your-doc-token>"
   }
@@ -89,25 +90,12 @@ echo "学习模式"
 
 | 配置项 | 说明 |
 |--------|------|
-| `activated` | 设为 `true` 后，进入项目即进入待命状态 |
-| `feishuDocToken` | 飞书文档 token，绑定后学习笔记可一键同步 |
+| `activated` | 设为 `true` 后，进入项目即进入待命 |
+| `feishuDocToken` | 飞书文档 token，绑定后可一键同步学习笔记 |
 
 ## Feishu Sync
 
-支持将学习要点同步到飞书文档。首次无配置时自动引导绑定。
-
-```
-"要不要把这些要点同步到飞书文档？" → 是 → 后台静默同步
-```
-
-## Install Safely
-
-```bash
-# 全局安装也安全 — 默认静默，只在检测到学习意图时激活
-cp -r guided-learning-mentor ~/.claude/skills/
-```
-
-没有 CLAUDE.md 声明也能用。检测到工程类指令自动退出。
+学习要点可同步到飞书文档。首次无配置时自动引导绑定。
 
 ## License
 

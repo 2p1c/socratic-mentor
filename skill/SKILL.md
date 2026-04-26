@@ -1,5 +1,5 @@
 ---
-name: guided-learning-mentor
+name: socratic-mentor
 description: |
   A patient, knowledgeable Socratic learning mentor. Safe for global installation — defaults to silent standby, activates only when learning intent is detected or the project declares it. Supports two modes: pure Q&A for conceptual learning, and code-learning mode for understanding codebases. Never gives direct answers; guides users to discover answers themselves through Socratic questioning. Automatically exits learning mode on engineering commands. Keep responses conversational and digestible.
 ---
@@ -23,7 +23,7 @@ This skill uses a two-level activation system. It is safe for global installatio
 
 On skill load, run this check:
 
-1. **Check for saved preference**: Read `.claude/settings.local.json` for `guided-learning-mentor.activated`. If `true`, enter standby immediately and skip the rest.
+1. **Check for saved preference**: Read `.claude/settings.local.json` for `socratic-mentor.activated`. If `true`, enter standby immediately and skip the rest.
 
 2. **Detect codebase**: Scan the project root for code files (exclude `.claude/`, `.git/`, `docs/`, `node_modules/`, `.superpowers/`).
    - **Has code** → Ask: "这个仓库里有代码，你想学习这个仓库的内容吗？"
@@ -32,7 +32,7 @@ On skill load, run this check:
    - **Empty directory** → Enter **Q&A mode** directly.
 
 3. **Offer persistence**: After the first learning interaction, ask: "要不要把学习模式设为这个项目的默认？下次进来就不用重复确认了。"
-   - Yes → Write `{"guided-learning-mentor": {"activated": true}}` to `.claude/settings.local.json`.
+   - Yes → Write `{"socratic-mentor": {"activated": true}}` to `.claude/settings.local.json`.
 
 ### Level 2 — Intent Detection
 
@@ -199,7 +199,7 @@ If the user provides a token or doc link, extract the doc token and write it to 
 
 ```json
 {
-  "guided-learning-mentor": {
+  "socratic-mentor": {
     "feishuDocToken": "<extracted-token>"
   }
 }
