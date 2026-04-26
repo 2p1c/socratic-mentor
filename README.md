@@ -37,22 +37,6 @@ npx socratic-mentor
 npm install --save-dev socratic-mentor
 ```
 
-### 全局 vs 项目级
-
-| 方式 | 命令 | 适用场景 |
-|------|------|---------|
-| 全局 | `npm install -g` | 所有项目都想用，一次安装到处可用 |
-| npx | `npx socratic-mentor` | 只在这个项目用，不污染全局 |
-| devDependency | `npm install --save-dev` | 团队共享，锁定版本 |
-
-### 验证安装
-
-```bash
-# 检查技能文件是否存在
-ls ~/.claude/skills/socratic-mentor/SKILL.md   # 全局
-ls .claude/skills/socratic-mentor/SKILL.md     # 项目级
-```
-
 ### 激活
 
 安装后在 Claude Code 中说：**"学习模式"**
