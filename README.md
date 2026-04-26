@@ -24,17 +24,52 @@
 
 > 最好的老师不是告诉你答案的人，而是让你自己找到答案的人。
 
-## Quick Start
+## Installation
 
 ```bash
-# 全局安装（所有项目可用）
+# 全局安装 — 所有项目可用
 npm install -g socratic-mentor
 
-# 或单项目安装
+# 单项目安装 — 仅当前项目
 npx socratic-mentor
+
+# 或作为项目依赖固化版本
+npm install --save-dev socratic-mentor
 ```
 
-安装后只需说 **"学习模式"** 即可激活。首次使用会自动引导你设置偏好。
+### 全局 vs 项目级
+
+| 方式 | 命令 | 适用场景 |
+|------|------|---------|
+| 全局 | `npm install -g` | 所有项目都想用，一次安装到处可用 |
+| npx | `npx socratic-mentor` | 只在这个项目用，不污染全局 |
+| devDependency | `npm install --save-dev` | 团队共享，锁定版本 |
+
+### 验证安装
+
+```bash
+# 检查技能文件是否存在
+ls ~/.claude/skills/socratic-mentor/SKILL.md   # 全局
+ls .claude/skills/socratic-mentor/SKILL.md     # 项目级
+```
+
+### 激活
+
+安装后在 Claude Code 中说：**"学习模式"**
+
+技能会自动检测你的项目环境，有代码库就问你要不要学代码，空目录则进入问答模式。首次使用后会问你要不要设为默认激活。
+
+## Quick Start
+
+用"学习模式"激活后，试试这些：
+
+```
+"讲讲 React hooks 是怎么工作的？"
+"这个项目的 auth 中间件在做什么？"
+"为什么说 Rust 的所有权系统能防止内存泄漏？"
+```
+
+每个问题技能都会用苏格拉底式提问引导你——不直接给答案，让你自己发现。
 
 ## Features
 
