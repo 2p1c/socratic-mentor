@@ -27,11 +27,11 @@ function findPkgRoot() {
 }
 
 function findSkillSource() {
-  const fromPkg = path.join(findPkgRoot(), "skill", SKILL_FILENAME);
+  const fromPkg = path.join(findPkgRoot(), "skills", SKILL_DIRNAME, SKILL_FILENAME);
   if (fs.existsSync(fromPkg)) return fromPkg;
 
   // Fallback: npx might have extracted to a temp dir
-  const fromCwd = path.join(process.cwd(), "skill", SKILL_FILENAME);
+  const fromCwd = path.join(process.cwd(), "skills", SKILL_DIRNAME, SKILL_FILENAME);
   if (fs.existsSync(fromCwd)) return fromCwd;
 
   error(
