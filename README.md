@@ -65,7 +65,7 @@ npm install --save-dev socratic-mentor
 
 **自动退出** — 识别工程指令自动退出，不干扰正常工作
 
-**飞书同步** — 学习要点一键同步到飞书文档
+**飞书同步** — 学习要点可同步到飞书文档，首次无配置时自动引导绑定
 
 ## Configuration
 
@@ -84,10 +84,6 @@ npm install --save-dev socratic-mentor
 |--------|------|
 | `activated` | 设为 `true` 后，进入项目即进入待命 |
 | `feishuDocToken` | 飞书文档 token，绑定后可一键同步学习笔记 |
-
-## Feishu Sync
-
-学习要点可同步到飞书文档。首次无配置时自动引导绑定。
 
 ## License
 
